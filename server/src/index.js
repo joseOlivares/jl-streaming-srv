@@ -1,6 +1,6 @@
 //const http=require('./app');
 const express = require("express");
-const https= require("https");
+//const https= require("https");
 
 const {createServer} = require("http");
 
@@ -8,11 +8,13 @@ const cors=require('cors');
 
 
 /*** FOR HTTPS */
+/*
 const fs =require('fs') ;
 const options={
     pfx: fs.readFileSync(__dirname +'/cert/jlstreamapp.pfx'),
     passphrase: 'jlstreamPWD'
 }
+*/
 /**  */
 
 const { Server } = require("socket.io");
