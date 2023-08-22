@@ -34,12 +34,16 @@ const PORT_HTTPS=3400;
 
 
 io.on('connection',(socket)=>{
-    console.log("Socket http: "+socket.id);
+    console.log("Socket http - ClientID: "+socket.id);
         socket.on('stream',(imgStream)=>{
             console.log("Entra en socketon stream" +imgStream);
             
             socket.broadcast.emit('stream',imgStream);
         });
+
+        socket.on("disconnect", (reason) => {
+           console.log("Client disconnectd id:"+socket.id)
+          });
 });
 
 /*
